@@ -26,7 +26,7 @@ pipeline {
                 script {
                     scannerHome = tool 'Sonarqube Scanner 3.2'
                 }
-                withSonarQubeEnv('Sonarqube Scanner 3.2') {
+                withSonarQubeEnv('jenkins-sonar') {
                     sh "${scannerHome}/bin/sonar-scanner"
 //                    sh 'mvn -X org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
 //                    sh 'mvn -X clean package sonar:sonar'
